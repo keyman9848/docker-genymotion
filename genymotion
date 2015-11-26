@@ -1,0 +1,10 @@
+#!/bin/bash
+
+exec docker run --rm \
+    --net host \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e DISPLAY=unix$DISPLAY \
+    --privileged \
+    -v /mnt/docker-data/configs/genymotion:/home/vu/.Genymobile \
+    --name genymotion \
+    thenewvu/genymotion
