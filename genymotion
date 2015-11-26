@@ -5,6 +5,6 @@ exec docker run --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
     --privileged \
-    -v /mnt/docker-data/configs/genymotion:/home/vu/.Genymobile \
+    -v /mnt/docker-data/configs/genymotion:/home/vu \
     --name genymotion \
     thenewvu/genymotion
