@@ -2,9 +2,9 @@
 
 exec docker run --rm \
     --net host \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -e DISPLAY=unix$DISPLAY \
     --privileged \
+    -e DISPLAY=unix$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
     -v /mnt/docker-data/configs/genymotion:/home/vu \
     --name genymotion \
     thenewvu/genymotion
